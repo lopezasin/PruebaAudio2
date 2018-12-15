@@ -138,8 +138,6 @@ var app = {
 
         // http://www.rtcmulticonnection.org/docs/socketURL/
         connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
-		//connection.socketURL = 'https://dev.xn--guiotepro-n6a.es:444/';
-		//connection.socketURL = 'https://dev.xn--guiotepro-n6a.es:444/';
 
         connection.socketMessageEvent = 'audio-conference-demo';
 

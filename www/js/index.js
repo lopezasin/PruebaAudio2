@@ -90,7 +90,7 @@ var app = {
 				
 		
 
-        permissions.checkPermission(permissions.RECORD_AUDIO, function(status) { //hasPermission
+        permissions.checkPermission(permissions, function(status) { //hasPermission
             if (status.hasPermission) {
                 callback();
                 return;
@@ -129,10 +129,10 @@ var app = {
         document.getElementById('open-room').onclick = function() {
             disableInputButtons();
             
-            app.checkAndroidPermissions(function() {
+           // app.checkAndroidPermissions(function() {
                 connection.open(document.getElementById('room-id').value, function() {
                     showRoomURL(connection.sessionid);
-                });
+            //    });
             });
         };
 
@@ -222,10 +222,10 @@ var app = {
         };
 
         function disableInputButtons() {
-            document.getElementById('open-or-join-room').disabled = true;
+           /* document.getElementById('open-or-join-room').disabled = true;
             document.getElementById('open-room').disabled = true;
             document.getElementById('join-room').disabled = true;
-            document.getElementById('room-id').disabled = true;
+            document.getElementById('room-id').disabled = true;*/
         }
 
         // ......................................................

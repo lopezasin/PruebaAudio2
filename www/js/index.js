@@ -102,6 +102,9 @@ var app = {
                     return;
                 }
                 alert('Please manually enable microphone permissions1.');
+				callback();//mio
+				return();//mio
+				
             }, function() {
                 alert('Please manually enable microphone permissions2.');
             });

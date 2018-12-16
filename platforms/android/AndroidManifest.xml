@@ -10,8 +10,8 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
-    <uses-permission android:name="android.permission.MICROPHONE" />
+    <!-- <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" /> -->
+    <luses-permission android:name="android.permission.MICROPHONE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />

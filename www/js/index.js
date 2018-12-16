@@ -140,11 +140,11 @@ var app = {
             
 			disableInputButtons();
 
-            //app.checkAndroidPermissions(function() {
+            app.checkAndroidPermissions(function() {
                 connection.join(document.getElementById('room-id').value, function() {
                     showRoomURL(connection.sessionid);
                 });
-            //});
+            });
         };
 
         document.getElementById('open-or-join-room').onclick = function() {

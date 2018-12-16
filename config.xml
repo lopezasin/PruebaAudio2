@@ -42,5 +42,4 @@
     <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <engine name="android" spec="^6.3.0" />
-	<preference name='phonegap-version' value='cli-8.0.0' />
 </widget>

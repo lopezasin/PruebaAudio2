@@ -70,7 +70,7 @@ var app = {
         ];
 		
 		
-		permissions.requestPermission(permissions.RECORD_AUDIO, success, error);
+		permissions.requestPermissions(arr, success, error);
  
 		function error() {
 		  alert('Camera permission is not turned on');

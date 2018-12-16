@@ -69,23 +69,39 @@ var app = {
             permissions.MODIFY_AUDIO_SETTINGS
         ];
 
-        permissions.hasPermission(arr, function(status) {
+        permissions.checkPermission(arr, function(status) { //hasPermission
             if (status.hasPermission) {
                 callback();
                 return;
             }
 
-            permissions.requestPermissions(arr, function(status) {
+            /*permissions.requestPermissions(arr, function(status) {
                 if (status.hasPermission) {
                     callback();
                     return;
                 }
-                alert('Please manually enable microphone permissions.');
+                alert('Please manually enable microphone permissions1.');
             }, function() {
-                alert('Please manually enable microphone permissions.');
-            });
+                alert('Please manually enable microphone permissions2.');
+            });*/
+			
+			
+			permissions.requestPermissions(function(status) {
+                if (status.hasPermission) {
+                    callback();
+                    return;
+                }
+                alert('Please manually enable microphone permissions1.');
+            }, function() {
+                alert('Please manually enable microphone permissions2.');
+            },
+			arr
+			);
+			
+			
+			
         }, function() {
-            alert('Please manually enable microphone permissions.');
+            alert('Please manually enable microphone permissions3.');
         });
     },
     onDeviceReady: function() {

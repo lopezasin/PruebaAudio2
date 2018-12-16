@@ -90,7 +90,7 @@ var app = {
 				
 		
 
-        permissions.checkPermission(arr, function(status) { //hasPermission
+        permissions.checkPermission(permissions.RECORD_AUDIO, function(status) { //hasPermission
             if (status.hasPermission) {
                 callback();
                 return;
@@ -102,8 +102,9 @@ var app = {
                     return;
                 }
                 alert('Please manually enable microphone permissions1.');
-				callback();//mio
-				return();//mio
+				alert(status)
+				alert(status.hasPermission)
+
 				
             }, function() {
                 alert('Please manually enable microphone permissions2.');

@@ -137,7 +137,8 @@ var app = {
         };
 
         document.getElementById('join-room').onclick = function() {
-            disableInputButtons();
+            
+			disableInputButtons();
 
             //app.checkAndroidPermissions(function() {
                 connection.join(document.getElementById('room-id').value, function() {

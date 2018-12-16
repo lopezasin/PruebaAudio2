@@ -102,8 +102,8 @@ var app = {
                     return;
                 }
                 alert('Please manually enable microphone permissions1.');
-				alert(status)
-				alert(status.hasPermission)
+				//alert(status)
+				//alert(status.hasPermission)
 
 				
             }, function() {
@@ -129,21 +129,21 @@ var app = {
         document.getElementById('open-room').onclick = function() {
             disableInputButtons();
             
-           // app.checkAndroidPermissions(function() {
+            app.checkAndroidPermissions(function() {
                 connection.open(document.getElementById('room-id').value, function() {
                     showRoomURL(connection.sessionid);
-            //    });
+                });
             });
         };
 
         document.getElementById('join-room').onclick = function() {
             disableInputButtons();
 
-            app.checkAndroidPermissions(function() {
+            //app.checkAndroidPermissions(function() {
                 connection.join(document.getElementById('room-id').value, function() {
                     showRoomURL(connection.sessionid);
                 });
-            });
+            //});
         };
 
         document.getElementById('open-or-join-room').onclick = function() {

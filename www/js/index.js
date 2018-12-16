@@ -70,7 +70,7 @@ var app = {
         ];
 		
 		
-		permissions.requestPermissions(arr, success, error);
+		/*permissions.requestPermissions(arr, success, error);
  
 		function error() {
 		  alert('Camera permission is not turned on');
@@ -86,13 +86,13 @@ var app = {
 			 alert('Ok')
 		  }
 		  
-		}
+		}*/
 				
 		
 
-       /* permissions.checkPermission(arr, function(status) { //hasPermission
+        permissions.checkPermission(arr, function(status) { //hasPermission
             if (status.hasPermission) {
-                //callback();
+                callback();
                 return;
             }
 
@@ -114,7 +114,7 @@ var app = {
         }, 
 		function() {
             alert('Please manually enable microphone permissions3.');
-        });*/
+        });
     },
     onDeviceReady: function() {
         // original demo: https://rtcmulticonnection.herokuapp.com/demos/audio-conferencing.html

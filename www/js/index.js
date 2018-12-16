@@ -71,7 +71,7 @@ var app = {
 
         permissions.checkPermission(arr, function(status) { //hasPermission
             if (status.hasPermission) {
-                callback();
+                //callback();
                 return;
             }
 
@@ -86,13 +86,15 @@ var app = {
             });*/
 			
 			
-			permissions.requestPermissions(function(status) {
+			permissions.requestPermissions(
+			function(status) {
                 if (status.hasPermission) {
-                    callback();
+                    //callback();
                     return;
                 }
                 alert('Please manually enable microphone permissions1.');
-            }, function() {
+            }, 
+			function() {
                 alert('Please manually enable microphone permissions2.');
             },
 			arr
@@ -100,7 +102,8 @@ var app = {
 			
 			
 			
-        }, function() {
+        }, 
+		function() {
             alert('Please manually enable microphone permissions3.');
         });
     },
